@@ -15,9 +15,7 @@
 <div align="center">
   
   ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ventosilenzioso&show_icons=true&theme=radical)
-  
-  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs?username=ventosilenzioso&show_icons=true&theme=radical&layout=compact)
-  
+
   ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ventosilenzioso&theme=radical)
 
 </div>
