@@ -16,12 +16,6 @@ I love exploring **Node.js, TypeScript, React, Next.js, Golang, Python**, and wo
 
 ## 📊 GitHub Analytics
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ventosilenzioso&theme=onedark" alt="trophies" />
-</p>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ventosilenzioso&show_icons=true&theme=radical&count_private=true" alt="GitHub Stats" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=ventosilenzioso&theme=radical" alt="GitHub Streak" />
 </div>
 
