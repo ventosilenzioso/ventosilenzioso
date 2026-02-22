@@ -183,10 +183,8 @@ const kevin: Developer = {
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/output/github-snake-dark.svg"/>
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/output/github-snake.svg"/>
-  <img alt="github-snake" width="95%" src="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/output/github-snake.svg"/>
+  <img alt="github-snake" width="95%" src="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/output/github-user-contribution.svg"/>
 </picture>
-
-> 💡 Enable with GitHub Actions — [guide here](https://github.com/Platane/snk)
 
 </div>
 
