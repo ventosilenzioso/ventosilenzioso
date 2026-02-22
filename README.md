@@ -181,9 +181,7 @@ const kevin: Developer = {
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/output/github-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/output/github-snake.svg"/>
-  <img alt="github-snake" width="95%" src="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/output/github-user-contribution.svg"/>
+  <img alt="github-snake" width="95%" src="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/github-user-contribution.svg"/>
 </picture>
 
 </div>
