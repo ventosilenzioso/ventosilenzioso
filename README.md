@@ -31,32 +31,7 @@
      TECH STACK (LEFT) + ABOUT (RIGHT)
 ══════════════════════════════════════ -->
 
-## 🛠️ Tech Stack &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🧑‍💻 About Me
-
-<table width="100%">
-<tr>
-<td width="32%" valign="top">
-
-**Languages**
-<br/>
-<img src="https://skillicons.dev/icons?i=ts,js,python,go&theme=dark&perline=4"/>
-
-**Runtime & Frameworks**
-<br/>
-<img src="https://skillicons.dev/icons?i=nodejs,express,react,nextjs&theme=dark&perline=4"/>
-
-**Databases & Cache**
-<br/>
-<img src="https://skillicons.dev/icons?i=postgres,mysql,sqlite,redis&theme=dark&perline=4"/>
-
-**DevOps & Tools**
-<br/>
-<img src="https://skillicons.dev/icons?i=docker,git,github,linux&theme=dark&perline=4"/>
-<br/>
-<img src="https://skillicons.dev/icons?i=vscode,postman&theme=dark&perline=4"/>
-
-</td>
-<td width="68%" valign="top">
+## 🧑‍💻 About Me
 
 ```typescript
 const kevin: Developer = {
@@ -72,8 +47,6 @@ const kevin: Developer = {
 };
 ```
 
-<br/>
-
 - 🎓 &nbsp; **14 y/o student** — learning and building simultaneously
 - 🚀 &nbsp; Focused on **Backend Engineering & API Design**
 - 🌱 &nbsp; Currently deepening: **Microservices & Cloud Deployment**
@@ -82,11 +55,18 @@ const kevin: Developer = {
 - 💬 &nbsp; Ask me about **Node.js, TypeScript, or Golang**
 - 📫 &nbsp; Reach me: **kevinnsaputra003@gmail.com**
 
-</td>
-</tr>
-</table>
+---
 
-<!-- mobile fallback: stacked view renders naturally on small screens via GitHub's table overflow -->
+## 🛠️ Tech Stack
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=ts,js,python,go&theme=dark&perline=8"/>
+<img src="https://skillicons.dev/icons?i=nodejs,express,react,nextjs&theme=dark&perline=8"/>
+<img src="https://skillicons.dev/icons?i=postgres,mysql,sqlite,redis&theme=dark&perline=8"/>
+<img src="https://skillicons.dev/icons?i=docker,git,github,linux,vscode,postman&theme=dark&perline=8"/>
+
+</div>
 
 
 ---
