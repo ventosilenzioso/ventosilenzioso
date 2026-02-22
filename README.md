@@ -1,194 +1,153 @@
 <div align="center">
 
-<!-- ╔══════════════════════════════════════════════════╗
-         ANIMATED HEADER
-╚══════════════════════════════════════════════════╝ -->
+<!-- ┌─────────────────────────────────────────────────────────┐
+        HEADER — upload header.svg to your repo root
+     └─────────────────────────────────────────────────────────┘ -->
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0f172a,30:1e1b4b,60:312e81,100:1e40af&height=250&section=header&text=Kevin%20Saputra&fontSize=72&fontColor=e0e7ff&animation=fadeIn&fontAlignY=40&desc=Backend%20Developer%20%7C%20Student%20%7C%20Aspiring%20System%20Architect&descAlignY=60&descSize=16&descColor=818cf8&stroke=4f46e5&strokeWidth=1"/>
+<img width="100%" src="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/main/header.svg" alt="Kevin Saputra"/>
 
-<!-- TYPING SVG -->
+<!-- TYPING BANNER -->
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&duration=2500&pause=800&color=818CF8&center=true&vCenter=true&width=640&lines=🚀+Building+Scalable+Backend+Systems;⚙️+Node.js+%7C+TypeScript+%7C+Golang+%7C+Python;🐳+Docker+%7C+PostgreSQL+%7C+Redis;🌱+Student+who+loves+to+build+things;🎯+Dreaming+of+becoming+a+System+Architect)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=2600&pause=900&color=7C3AED&center=true&vCenter=true&width=620&lines=🚀+Building+Fast+%26+Scalable+APIs;⚙️+TypeScript+·+Golang+·+Node.js;🐳+Docker+·+PostgreSQL+·+Redis;🌱+Student+who+builds+real+things;🎯+Aspiring+System+Architect)](https://git.io/typing-svg)
 
 <br/>
 
-<!-- BADGES ROW -->
+<!-- STATUS BADGES -->
 ![Profile Views](https://komarev.com/ghpvc/?username=ventosilenzioso&style=for-the-badge&color=4f46e5&label=PROFILE+VIEWS)
-![Status](https://img.shields.io/badge/STATUS-STUDENT-10b981?style=for-the-badge&logo=academia&logoColor=white)
-![Open to Learn](https://img.shields.io/badge/OPEN%20TO-LEARN-f59e0b?style=for-the-badge&logo=bookstack&logoColor=white)
+![Student](https://img.shields.io/badge/STUDENT-LEARNING-10b981?style=for-the-badge&logo=bookstack&logoColor=white)
 ![Backend](https://img.shields.io/badge/BACKEND-FOCUSED-6366f1?style=for-the-badge&logo=server&logoColor=white)
 
 </div>
 
 ---
 
-<!-- ╔══════════════════════════════════════════════════╗
-         ABOUT ME
-╚══════════════════════════════════════════════════╝ -->
+<!-- ┌─────────────────────────────────────────────────────────┐
+        ABOUT + TECH STACK (side by side)
+     └─────────────────────────────────────────────────────────┘ -->
 
-<img align="right" width="320" src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif"/>
+<table width="100%">
+<tr>
+<td width="38%" valign="top">
+
+## 🛠️ Tech Stack
+
+**Languages**
+<br/>
+<img src="https://skillicons.dev/icons?i=ts,js,python,go&theme=dark&perline=4"/>
+
+**Runtime & Frameworks**
+<br/>
+<img src="https://skillicons.dev/icons?i=nodejs,express,react,nextjs&theme=dark&perline=4"/>
+
+**Databases**
+<br/>
+<img src="https://skillicons.dev/icons?i=postgres,mysql,sqlite,redis&theme=dark&perline=4"/>
+
+**DevOps & Tools**
+<br/>
+<img src="https://skillicons.dev/icons?i=docker,git,linux,vscode&theme=dark&perline=4"/>
+
+</td>
+<td width="4%"></td>
+<td width="58%" valign="top">
 
 ## 🧑‍💻 About Me
 
 ```typescript
 const kevin: Developer = {
   name     : "Kevin Saputra",
+  age      : 14,
   location : "Indonesia 🇮🇩",
   status   : "Student & Backend Developer",
   goal     : "System Architect 🏗️",
+  stack    : ["TypeScript", "Node.js", "Golang"],
   learning : ["Microservices", "Cloud", "System Design"],
-  building : "Scalable APIs & Web Applications",
   email    : "kevinnsaputra003@gmail.com",
-  motto    : "Still learning, always building 🌱",
+  note     : "Still learning · Always building 🌱",
 };
 ```
 
-<br/>
+- 🎓 &nbsp; **14 y/o student** — learning and building at the same time
+- 🚀 &nbsp; Focused on **Backend Engineering & API Design**
+- 🌱 &nbsp; Currently deepening: **Microservices & Cloud**
+- 🏗️ &nbsp; Long-term goal: become a **System Architect**
+- 💬 &nbsp; Ask me about **Node.js, TypeScript, Golang**
 
-- 🎓 &nbsp; Masih **pelajar**, belajar sambil membangun sesuatu
-- 🚀 &nbsp; Fokus di **Backend Engineering & API Design**
-- 🌱 &nbsp; Sedang mendalami **Cloud & Microservices**
-- 🏗️ &nbsp; Bermimpi jadi **System Architect** suatu hari nanti
-- 💬 &nbsp; Tanya aku soal **Node.js, TypeScript, Golang**
-
-<br clear="right"/>
-
----
-
-<!-- ╔══════════════════════════════════════════════════╗
-         SKILLICONS GRID
-╚══════════════════════════════════════════════════╝ -->
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-### Languages
-<img src="https://skillicons.dev/icons?i=js,ts,python,go&theme=dark&perline=8"/>
-
-### Frameworks & Runtime
-<img src="https://skillicons.dev/icons?i=nodejs,express,react,nextjs&theme=dark&perline=8"/>
-
-### Databases & Cache
-<img src="https://skillicons.dev/icons?i=postgres,mysql,sqlite,redis&theme=dark&perline=8"/>
-
-### DevOps & Tools
-<img src="https://skillicons.dev/icons?i=docker,git,github,linux,vscode,postman&theme=dark&perline=8"/>
-
-</div>
+</td>
+</tr>
+</table>
 
 ---
 
-<!-- ╔══════════════════════════════════════════════════╗
-         JOURNEY / ROADMAP
-╚══════════════════════════════════════════════════╝ -->
-
-## 🗺️ Learning Journey
-
-<div align="center">
-
-| Skill | Progress | Level |
-|---|---|---|
-| Node.js · TypeScript | `████████████████████` | Comfortable |
-| REST API · Express   | `██████████████████░░` | Comfortable |
-| PostgreSQL · MySQL   | `████████████████░░░░` | Intermediate |
-| Docker · Git         | `███████████████░░░░░` | Intermediate |
-| Golang               | `████████████░░░░░░░░` | Learning |
-| Microservices        | `█████████░░░░░░░░░░░` | Learning |
-| Cloud Deployment     | `███████░░░░░░░░░░░░░` | Exploring |
-| System Architecture  | `░░░░░░░░░░░░░░░░░░░░` | **🎯 Destination** |
-
-</div>
-
----
-
-<!-- ╔══════════════════════════════════════════════════╗
-         GITHUB STATS (3 CARDS)
-╚══════════════════════════════════════════════════╝ -->
+<!-- ┌─────────────────────────────────────────────────────────┐
+        GITHUB STATS
+     └─────────────────────────────────────────────────────────┘ -->
 
 ## 📊 GitHub Stats
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=ventosilenzioso&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=818cf8&icon_color=6366f1&text_color=94a3b8&include_all_commits=true&count_private=true"/>
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=ventosilenzioso&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=818cf8&icon_color=6366f1&text_color=94a3b8&include_all_commits=true&count_private=true"/>
 &nbsp;
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ventosilenzioso&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=818cf8&text_color=94a3b8"/>
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ventosilenzioso&layout=compact&langs_count=7&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=818cf8&text_color=94a3b8"/>
 
 </div>
 
 ---
 
-<!-- ╔══════════════════════════════════════════════════╗
-         COMMIT GRAPH (GRAFANA-STYLE)
-╚══════════════════════════════════════════════════╝ -->
+<!-- ┌─────────────────────────────────────────────────────────┐
+        COMMIT ACTIVITY — GRAFANA STYLE
+     └─────────────────────────────────────────────────────────┘ -->
 
 ## 📈 Commit Activity
 
 <div align="center">
 
-<img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=ventosilenzioso&bg_color=0d1117&color=818cf8&line=6366f1&point=a5b4fc&area=true&area_color=312e81&hide_border=true&custom_title=📊%20Commit%20Activity%20Graph&radius=6&height=230"/>
+<img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=ventosilenzioso&bg_color=0d1117&color=818cf8&line=6366f1&point=a5b4fc&area=true&area_color=1e1b4b&hide_border=true&custom_title=commit+activity+—+last+12+months&radius=5&height=220"/>
 
 </div>
 
 ---
 
-<!-- ╔══════════════════════════════════════════════════╗
-         STREAK STATS
-╚══════════════════════════════════════════════════╝ -->
+<!-- ┌─────────────────────────────────────────────────────────┐
+        STREAK
+     └─────────────────────────────────────────────────────────┘ -->
 
-## 🔥 Streak Stats
+## 🔥 Streak
 
 <div align="center">
 
-<img width="65%" src="https://github-readme-streak-stats.herokuapp.com/?user=ventosilenzioso&theme=tokyonight&hide_border=true&background=0d1117&stroke=1e293b&ring=6366f1&fire=f97316&currStreakNum=e0e7ff&sideNums=e0e7ff&currStreakLabel=818cf8&sideLabels=818cf8&dates=475569"/>
+<img width="62%" src="https://github-readme-streak-stats.herokuapp.com/?user=ventosilenzioso&theme=tokyonight&hide_border=true&background=0d1117&stroke=1e293b&ring=6366f1&fire=f97316&currStreakNum=e0e7ff&sideNums=e0e7ff&currStreakLabel=818cf8&sideLabels=818cf8&dates=475569"/>
 
 </div>
 
 ---
 
-<!-- ╔══════════════════════════════════════════════════╗
-         CONTRIBUTION SNAKE
-╚══════════════════════════════════════════════════╝ -->
-
-## 🐍 Contribution Snake
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/output/github-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/output/github-snake.svg"/>
-  <img alt="github contribution snake" width="95%" src="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/output/github-snake.svg"/>
-</picture>
-
-</div>
-
----
-
-<!-- ╔══════════════════════════════════════════════════╗
-         QUOTE
-╚══════════════════════════════════════════════════╝ -->
+<!-- ┌─────────────────────────────────────────────────────────┐
+        ROTATING DEV QUOTES
+     └─────────────────────────────────────────────────────────┘ -->
 
 ## 💬 Quote
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=4000&pause=3000&color=475569&center=true&vCenter=true&width=700&lines=%22Code+is+like+humor.+When+you+have+to+explain+it%2C+it's+bad.%22;%22First+solve+the+problem%2C+then+write+the+code.%22;%22Simplicity+is+the+soul+of+efficiency.%22;%22Make+it+work%2C+make+it+right%2C+make+it+fast.%22"/>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=4500&pause=3500&color=475569&center=true&vCenter=true&width=720&lines=%22Code+is+like+humor.+When+you+have+to+explain+it%2C+it's+bad.%22;%22First+solve+the+problem%2C+then+write+the+code.%22;%22Simplicity+is+the+soul+of+efficiency.%22;%22Make+it+work%2C+make+it+right%2C+make+it+fast.%22;%22The+best+code+is+no+code+at+all.%22)](https://git.io/typing-svg)
 
 </div>
 
 ---
 
-<!-- ╔══════════════════════════════════════════════════╗
-         CONTACT
-╚══════════════════════════════════════════════════╝ -->
+<!-- ┌─────────────────────────────────────────────────────────┐
+        CONTACT
+     └─────────────────────────────────────────────────────────┘ -->
 
 ## 📬 Contact
 
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/github-ventosilenzioso-0d1117?style=for-the-badge&logo=github&logoColor=white&labelColor=1e293b)](https://github.com/ventosilenzioso)
-[![Email](https://img.shields.io/badge/email-kevinnsaputra003@gmail.com-0d1117?style=for-the-badge&logo=gmail&logoColor=white&labelColor=dc2626)](mailto:kevinnsaputra003@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-ventosilenzioso-0d1117?style=for-the-badge&logo=github&logoColor=white&labelColor=1e293b)](https://github.com/ventosilenzioso)
+[![Email](https://img.shields.io/badge/Email-kevinnsaputra003%40gmail.com-0d1117?style=for-the-badge&logo=gmail&logoColor=white&labelColor=dc2626)](mailto:kevinnsaputra003@gmail.com)
 
 </div>
 
@@ -196,7 +155,7 @@ const kevin: Developer = {
 
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1e1b4b,50:312e81,100:1e40af&height=130&section=footer&animation=fadeIn"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1e1b4b,50:312e81,100:0f172a&height=110&section=footer&animation=fadeIn"/>
 
 *still learning · still building · one commit at a time 🚀*
 
