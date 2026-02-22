@@ -181,7 +181,7 @@ const kevin: Developer = {
 <div align="center">
 
 <picture>
-  <img alt="github-snake" width="95%" src="[https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/github-user-contribution.svg](https://github.com/ventosilenzioso/ventosilenzioso/blob/main/github-user-contribution.svg)"/>
+  <img width="95%" src="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/main/github-user-contribution.svg"/>
 </picture>
 
 </div>
@@ -222,7 +222,7 @@ const kevin: Developer = {
      ROTATING QUOTES
 ══════════════════════════════════════ -->
 
-## 💬 Dev Quote
+## 💬 Quote
 
 <div align="center">
 
