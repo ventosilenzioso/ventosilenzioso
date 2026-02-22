@@ -116,9 +116,12 @@ const kevin: Developer = {
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=ventosilenzioso&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=818cf8&icon_color=6366f1&text_color=94a3b8&include_all_commits=true&count_private=true"/>
-&nbsp;
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ventosilenzioso&layout=compact&langs_count=7&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=818cf8&text_color=94a3b8"/>
+<img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ventosilenzioso&theme=tokyonight"/>
+<img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ventosilenzioso&theme=tokyonight"/>
+
+<br/>
+
+<img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ventosilenzioso&theme=tokyonight"/>
 
 </div>
 
@@ -161,12 +164,8 @@ const kevin: Developer = {
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/output/github-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/output/github-snake.svg"/>
-  <img alt="github-snake" width="95%" src="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/output/github-snake.svg"/>
+  <img alt="github-snake" width="95%" src="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/main/github-snake.svg"/>
 </picture>
-
-> 💡 Enable with GitHub Actions — [guide here](https://github.com/Platane/snk)
 
 </div>
 
@@ -206,7 +205,7 @@ const kevin: Developer = {
      ROTATING QUOTES
 ══════════════════════════════════════ -->
 
-## 💬 Dev Quote
+## 💬 Quote
 
 <div align="center">
 
