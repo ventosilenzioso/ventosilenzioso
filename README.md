@@ -1,256 +1,292 @@
-<div align="center">
+# RakNet Protocol Specification
 
-<!-- ══════════════════════════════════════
-     HEADER — fixed, no emoji in params
-══════════════════════════════════════ -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,40:1e1b4b,100:1e3a8a&height=230&section=header&text=Kevin%20Saputra&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=40&desc=Backend%20Developer%20%7C%2014%20y%2Fo%20Student%20%7C%20Indonesia&descAlignY=60&descSize=17&descColor=818cf8"/>
+This document describes the RakNet protocol implementation used in this project.
 
-<!-- ══════════════════════════════════════
-     TYPING ANIMATION
-══════════════════════════════════════ -->
-<br/>
+## Overview
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=2600&pause=900&color=818CF8&center=true&vCenter=true&width=640&lines=Building+Fast+%26+Scalable+Backend+Systems+%F0%9F%9A%80;TypeScript+%C2%B7+Golang+%C2%B7+Node.js+%C2%B7+Python;Docker+%C2%B7+PostgreSQL+%C2%B7+Redis+%C2%B7+Linux;14+y%2Fo+Student+who+builds+real+things+%F0%9F%8C%B1;Aspiring+System+Architect+%F0%9F%8F%97%EF%B8%8F)](https://git.io/typing-svg)
+RakNet is a reliable UDP-based networking protocol designed for real-time multiplayer games. It provides:
 
-<br/>
+- Reliable and ordered packet delivery
+- Automatic packet fragmentation and reassembly
+- Connection management
+- Bandwidth optimization
+- Low latency
 
-<!-- ══════════════════════════════════════
-     STATUS BADGES
-══════════════════════════════════════ -->
-![Profile Views](https://komarev.com/ghpvc/?username=ventosilenzioso&style=for-the-badge&color=4f46e5&label=PROFILE+VIEWS)
-![Age](https://img.shields.io/badge/AGE-14-a855f7?style=for-the-badge&logo=cake&logoColor=white)
-![Student](https://img.shields.io/badge/STATUS-STUDENT-10b981?style=for-the-badge&logo=academia&logoColor=white)
-![Backend](https://img.shields.io/badge/BACKEND-FOCUSED-6366f1?style=for-the-badge&logo=server&logoColor=white)
-![Goal](https://img.shields.io/badge/GOAL-SYSTEM%20ARCHITECT-f59e0b?style=for-the-badge&logo=blueprint&logoColor=white)
+## Connection Flow
 
-</div>
+### 1. Initial Handshake
 
----
-
-<!-- ══════════════════════════════════════
-     TECH STACK (LEFT) + ABOUT (RIGHT)
-══════════════════════════════════════ -->
-
-<table width="100%">
-<tr>
-<td width="40%" valign="top">
-
-## 🛠️ Tech Stack
-
-**Languages**
-<br/>
-<img src="https://skillicons.dev/icons?i=ts,js,python,go&theme=dark&perline=4"/>
-
-**Runtime & Frameworks**
-<br/>
-<img src="https://skillicons.dev/icons?i=nodejs,express,react,nextjs&theme=dark&perline=4"/>
-
-**Databases & Cache**
-<br/>
-<img src="https://skillicons.dev/icons?i=postgres,mysql,sqlite,redis&theme=dark&perline=4"/>
-
-**DevOps & Tools**
-<br/>
-<img src="https://skillicons.dev/icons?i=docker,git,github,linux&theme=dark&perline=4"/>
-<br/>
-<img src="https://skillicons.dev/icons?i=vscode,postman&theme=dark&perline=4"/>
-
-</td>
-<td width="2%"></td>
-<td width="58%" valign="top">
-
-## 🧑‍💻 About Me
-
-```typescript
-const kevin: Developer = {
-  name     : "Kevin Saputra",
-  age      : 14,
-  location : "Indonesia",
-  status   : "Student & Backend Developer",
-  goal     : "System Architect",
-  stack    : ["TypeScript", "Node.js", "Golang"],
-  learning : ["Microservices", "Cloud", "System Design"],
-  email    : "kevinnsaputra003@gmail.com",
-  note     : "Still learning, always building",
-};
+```
+Client                          Server
+  |                               |
+  |------ 0x08 ------------------>|  Open Connection Request 1
+  |       (4 bytes)               |
+  |                               |
+  |<----- 0x1A -------------------|  Open Connection Reply 1
+  |       (Cookie: port XOR)      |
+  |                               |
+  |------ 0xA2 ------------------>|  Open Connection Request 2
+  |       (4 bytes)               |
+  |                               |
+  |<----- 0x19 -------------------|  Open Connection Reply 2
+  |       (Connection accepted)   |
+  |                               |
 ```
 
-<br/>
+### 2. SA-MP Authentication (Optional)
 
-- 🎓 &nbsp; **14 y/o student** — learning and building simultaneously
-- 🚀 &nbsp; Focused on **Backend Engineering & API Design**
-- 🌱 &nbsp; Currently deepening: **Microservices & Cloud Deployment**
-- 🏗️ &nbsp; Long-term goal: become a **System Architect**
-- 🐳 &nbsp; Love containerizing everything with **Docker**
-- 💬 &nbsp; Ask me about **Node.js, TypeScript, or Golang**
-- 📫 &nbsp; Reach me: **kevinnsaputra003@gmail.com**
+```
+Client                          Server
+  |                               |
+  |------ 0x88 ------------------>|  Auth Request
+  |                               |
+  |<----- E3:00 ------------------|  Challenge
+  |       (25 bytes)              |
+  |                               |
+  |------ 0x22 ------------------>|  Login Data
+  |       (48 bytes)              |
+  |                               |
+  |<----- E3:01 ------------------|  Auth Accept
+  |       (3 bytes)               |
+  |                               |
+```
 
-</td>
-</tr>
-</table>
+### 3. Game Connection
 
----
+```
+Client                          Server
+  |                               |
+  |------ 0x8A ------------------>|  Join Request
+  |                               |
+  |<----- E5 ---------------------|  Player Sync
+  |<----- E3:07 ------------------|  Spawn List
+  |<----- E3:21 ------------------|  Game Entry Complete
+  |                               |
+  |<----- Game RPCs --------------|  InitGame, SetSpawnInfo, etc.
+  |                               |
+```
 
-<!-- ══════════════════════════════════════
-     CURRENTLY WORKING ON
-══════════════════════════════════════ -->
+## Packet Structure
 
-## 🔨 Currently Working On
+### Data Packet (0x84-0x8D)
 
-<div align="center">
+```
++--------+--------+--------+--------+
+| Packet |   Sequence Number (24)   |
+|   ID   |        (Little Endian)   |
++--------+--------+--------+--------+
+|                                   |
+|     Encapsulated Packets...       |
+|                                   |
++-----------------------------------+
+```
 
-<table>
-  <tr>
-    <td align="center" width="200">
-      <img src="https://skillicons.dev/icons?i=nodejs&theme=dark" width="44"/><br/>
-      <b>REST API</b><br/>
-      <sub>Node.js + TypeScript</sub>
-    </td>
-    <td align="center" width="200">
-      <img src="https://skillicons.dev/icons?i=go&theme=dark" width="44"/><br/>
-      <b>Golang Services</b><br/>
-      <sub>Microservices experiment</sub>
-    </td>
-    <td align="center" width="200">
-      <img src="https://skillicons.dev/icons?i=docker&theme=dark" width="44"/><br/>
-      <b>Containerization</b><br/>
-      <sub>Docker + Orchestration</sub>
-    </td>
-    <td align="center" width="200">
-      <img src="https://skillicons.dev/icons?i=postgres&theme=dark" width="44"/><br/>
-      <b>DB Design</b><br/>
-      <sub>PostgreSQL schemas</sub>
-    </td>
-  </tr>
-</table>
+### Encapsulated Packet
 
-</div>
+```
++--------+--------+--------+
+| Flags  | Length (16 BE)  |
++--------+--------+--------+
+|  Message Index (24 LE)  |  (if Reliable)
++--------+--------+--------+
+|   Order Index (24 LE)   |  (if Ordered)
++--------+--------+--------+
+| Channel|                 |  (if Ordered)
++--------+                 |
+|                          |
+|      Payload...          |
+|                          |
++--------------------------+
+```
 
----
+### Flags Byte
 
-<!-- ══════════════════════════════════════
-     GITHUB STATS
-══════════════════════════════════════ -->
+```
+Bit 7-5: Reliability Type
+  000 = Unreliable
+  001 = Unreliable Sequenced
+  010 = Reliable
+  011 = Reliable Ordered
+  100 = Reliable Sequenced
 
-## 📊 GitHub Stats
+Bit 4: Has Split
+Bit 3-0: Reserved
+```
 
-<div align="center">
+### ACK Packet (0xC0)
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=ventosilenzioso&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=818cf8&icon_color=6366f1&text_color=94a3b8&include_all_commits=true&count_private=true"/>
-&nbsp;
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ventosilenzioso&layout=compact&langs_count=7&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=818cf8&text_color=94a3b8"/>
+```
++--------+--------+--------+
+| 0xC0   | Count (16 LE)   |
++--------+--------+--------+
+| Record |                 |
+| Type   |  Sequence (24)  |
++--------+--------+--------+
+|     ... more records     |
++--------------------------+
+```
 
-</div>
+### NACK Packet (0xA0)
 
----
+Same structure as ACK, but with packet ID 0xA0.
 
-<!-- ══════════════════════════════════════
-     COMMIT ACTIVITY GRAPH (GRAFANA-STYLE)
-══════════════════════════════════════ -->
+## Reliability Types
 
-## 📈 Commit Activity
+### Unreliable (0)
 
-<div align="center">
+- No delivery guarantee
+- No ordering guarantee
+- Lowest overhead
+- Use for: Position updates, voice data
 
-<img width="97%" src="https://github-readme-activity-graph.vercel.app/graph?username=ventosilenzioso&bg_color=0d1117&color=818cf8&line=6366f1&point=a5b4fc&area=true&area_color=1e1b4b&hide_border=true&custom_title=Commit+Activity+%E2%80%94+Last+12+Months&radius=5&height=230"/>
+### Unreliable Sequenced (1)
 
-</div>
+- No delivery guarantee
+- Only latest packet is processed
+- Use for: Frequent state updates
 
----
+### Reliable (2)
 
-<!-- ══════════════════════════════════════
-     STREAK
-══════════════════════════════════════ -->
+- Guaranteed delivery
+- No ordering guarantee
+- Use for: Important events
 
-## 🔥 Streak Stats
+### Reliable Ordered (3)
 
-<div align="center">
+- Guaranteed delivery
+- Guaranteed order
+- Most commonly used
+- Use for: Game events, RPCs
 
-<img width="64%" src="https://github-readme-streak-stats.herokuapp.com/?user=ventosilenzioso&theme=tokyonight&hide_border=true&background=0d1117&stroke=1e293b&ring=6366f1&fire=f97316&currStreakNum=e0e7ff&sideNums=e0e7ff&currStreakLabel=818cf8&sideLabels=818cf8&dates=475569"/>
+### Reliable Sequenced (4)
 
-</div>
+- Guaranteed delivery
+- Only latest packet is processed
+- Use for: State synchronization
 
----
+## Session Management
 
-<!-- ══════════════════════════════════════
-     CONTRIBUTION SNAKE
-══════════════════════════════════════ -->
+### Session States
 
-## 🐍 Contribution Snake
+1. **UNCONNECTED** - No connection established
+2. **HANDSHAKE_SENT** - Waiting for handshake completion
+3. **CONNECTING** - Connection in progress
+4. **CONNECTED** - Connection established
+5. **IN_GAME** - Game session active
 
-<div align="center">
+### Session Counters
 
-<picture>
-  <img width="95%" src="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/main/github-user-contribution.svg"/>
-</picture>
+Each session maintains:
 
-</div>
+- **SequenceNumber**: Increments for each datagram sent
+- **MessageIndex**: Increments for each reliable packet
+- **OrderIndex[channel]**: Increments for each ordered packet per channel
 
----
+These counters MUST be monotonically increasing and NEVER reset during the session lifetime.
 
-<!-- ══════════════════════════════════════
-     LANGUAGES USED (DETAILED)
-══════════════════════════════════════ -->
+## MTU (Maximum Transmission Unit)
 
-## 🌐 Languages & Tools Detail
+Default MTU: **576 bytes**
 
-<div align="center">
+This is the maximum size of a single UDP packet. Larger payloads must be split into multiple packets.
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+Safe payload sizes:
+- Reliable Ordered: 501 bytes
+- Reliable: 505 bytes
 
-</div>
+## Timing
 
----
+### Intervals
 
-<!-- ══════════════════════════════════════
-     ROTATING QUOTES
-══════════════════════════════════════ -->
+- **ACK Send**: 50ms
+- **Keepalive**: 5 seconds
+- **Timeout**: 30 seconds
+- **Retry Delay**: 100ms (exponential backoff)
 
-## 💬 Quote
+### Retransmission
 
-<div align="center">
+Packets are retransmitted if:
+1. No ACK received within timeout
+2. NACK received
+3. Maximum 5 retries before disconnection
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=5000&pause=4000&color=475569&center=true&vCenter=true&width=740&lines=%22Code+is+like+humor.+When+you+have+to+explain+it%2C+it%27s+bad.%22;%22First+solve+the+problem%2C+then+write+the+code.%22;%22Simplicity+is+the+soul+of+efficiency.%22;%22Make+it+work%2C+make+it+right%2C+make+it+fast.%22;%22The+best+code+is+the+code+you+don%27t+have+to+write.%22)](https://git.io/typing-svg)
+## Error Handling
 
-</div>
+### Packet Loss
 
----
+- Detected via sequence number gaps
+- NACK sent for missing packets
+- Automatic retransmission
 
-<!-- ══════════════════════════════════════
-     CONTACT
-══════════════════════════════════════ -->
+### Out of Order
 
-## 📬 Contact
+- Packets buffered until in-order
+- OrderIndex used for reordering
+- Per-channel ordering
 
-<div align="center">
+### Duplicate Packets
 
-[![GitHub](https://img.shields.io/badge/GitHub-ventosilenzioso-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=1e293b)](https://github.com/ventosilenzioso)
-[![Gmail](https://img.shields.io/badge/Gmail-kevinnsaputra003%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=7f1d1d)](mailto:kevinnsaputra003@gmail.com)
+- Detected via sequence number
+- Silently discarded
+- ACK still sent
 
-</div>
+## Performance Considerations
 
----
+### Bandwidth Optimization
 
-<div align="center">
+1. **Batching**: Multiple small packets combined into one datagram
+2. **Compression**: Optional payload compression
+3. **Selective ACK**: Only ACK received packets
+4. **Delayed ACK**: Batch ACKs to reduce overhead
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1e3a8a,50:1e1b4b,100:0f0c29&height=120&section=footer&animation=fadeIn"/>
+### Latency Optimization
 
-*still learning · still building · one commit at a time 🚀*
+1. **Immediate Send**: Critical packets sent immediately
+2. **Priority Queue**: High-priority packets sent first
+3. **Congestion Control**: Adaptive send rate
 
-</div>
+## Security
+
+### Port Obfuscation
+
+The 0x1A packet uses XOR encoding for the client port:
+```
+encoded_hi = (port >> 8) ^ 0x82
+encoded_lo = (port & 0xFF) ^ 0x93
+```
+
+### Session Validation
+
+- Each session has unique sequence numbers
+- Packets from wrong session are rejected
+- Timeout for inactive sessions
+
+## Debugging
+
+### Packet Logging
+
+Enable detailed logging:
+```go
+logger.SetLevel(logger.LevelDebug)
+```
+
+### Common Issues
+
+1. **Counter Reset**: Ensure counters never reset
+2. **Wrong Reliability**: Use Reliable Ordered for most game packets
+3. **MTU Exceeded**: Split large packets
+4. **ACK Timeout**: Check network latency
+
+## References
+
+- [RakNet Documentation](http://www.jenkinssoftware.com/)
+- [SA-MP Protocol](https://sampwiki.blast.hk/)
+- [UDP Best Practices](https://gafferongames.com/post/udp_vs_tcp/)
+
+## Version History
+
+- **v1.0.0** - Initial implementation
+  - Basic RakNet protocol
+  - Reliable ordered delivery
+  - Session management
+  - ACK/NACK system
