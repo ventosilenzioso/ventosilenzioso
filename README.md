@@ -164,7 +164,7 @@ const kevin: Developer = {
 <div align="center">
 
 <picture>
-  <img alt="github-snake" width="95%" src="https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/main/github-snake.svg"/>
+  <img alt="github-snake" width="95%" src="[https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/main/github-snake.svg](https://raw.githubusercontent.com/ventosilenzioso/ventosilenzioso/main/github-user-contribution.svg)"/>
 </picture>
 
 </div>
