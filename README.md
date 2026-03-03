@@ -20,9 +20,9 @@
 <div align="center">
 
 <!-- Total stats -->
-<img width="48%" src="https://github-readme-stats.vercel.app/api?username=ventosilenzioso&show_icons=true&theme=dark&hide_border=true&count_private=true"/>
+<img width="48%" src="https:///ventosilenzioso.vercel.app/api?username=ventosilenzioso&show_icons=true&theme=dark&hide_border=true&count_private=true"/>
 
 <!-- Top languages -->
-<img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ventosilenzioso&layout=compact&theme=dark&hide_border=true"/>
+<img width="48%" src="https://ventosilenzioso.vercel.app/api/top-langs/?username=ventosilenzioso&layout=compact&theme=dark&hide_border=true"/>
 
 </div>
