@@ -15,14 +15,13 @@
 
 ---
 
-## 📊 GitHub Stats
+## 📊 GitHub Stats (Shields.io)
 
 <div align="center">
 
-<!-- Total stats -->
-<img width="48%" src="https:///ventosilenzioso.vercel.app/api?username=ventosilenzioso&show_icons=true&theme=dark&hide_border=true&count_private=true"/>
-
-<!-- Top languages -->
-<img width="48%" src="https://ventosilenzioso.vercel.app/api/top-langs/?username=ventosilenzioso&layout=compact&theme=dark&hide_border=true"/>
+![Repositories](https://img.shields.io/github/repos/ventosilenzioso?style=for-the-badge&color=000000&logo=github&logoColor=ffffff)
+![Followers](https://img.shields.io/github/followers/ventosilenzioso?style=for-the-badge&color=000000&logo=github&logoColor=ffffff)
+![Following](https://img.shields.io/github/following/ventosilenzioso?style=for-the-badge&color=000000&logo=github&logoColor=ffffff)
+![Stars](https://img.shields.io/github/stars/ventosilenzioso?style=for-the-badge&color=000000&logo=github&logoColor=ffffff)
 
 </div>
