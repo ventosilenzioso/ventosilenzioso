@@ -15,13 +15,12 @@
 
 ---
 
-## 📊 GitHub Stats (Shields.io)
+## 📊 GitHub Stats
 
 <div align="center">
 
-![Repositories](https://img.shields.io/github/repos/ventosilenzioso?style=for-the-badge&color=000000&logo=github&logoColor=ffffff)
-![Followers](https://img.shields.io/github/followers/ventosilenzioso?style=for-the-badge&color=000000&logo=github&logoColor=ffffff)
-![Following](https://img.shields.io/github/following/ventosilenzioso?style=for-the-badge&color=000000&logo=github&logoColor=ffffff)
-![Stars](https://img.shields.io/github/stars/ventosilenzioso?style=for-the-badge&color=000000&logo=github&logoColor=ffffff)
+![GitHub Stats](https://github-readme-stats-fast.vercel.app/api?username=ventosilenzioso&show_icons=true&theme=github_dark)
+![GitHub Stats](https://github-readme-stats-fast.vercel.app/api/streak?username=ventosilenzioso&theme=github_dark)
+![GitHub Stats](https://github-readme-stats-fast.vercel.app/api/top-langs/?username=ventosilenzioso&layout=compact&theme=github_dark)
 
 </div>
