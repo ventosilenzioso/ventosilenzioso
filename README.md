@@ -19,21 +19,10 @@
 
 <div align="center">
 
-<img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ventosilenzioso&theme=shades-of-grey"/>
-<img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ventosilenzioso&theme=shades-of-grey"/>
+<!-- Total stats -->
+<img width="48%" src="https://github-readme-stats.vercel.app/api?username=ventosilenzioso&show_icons=true&theme=dark&hide_border=true&count_private=true"/>
 
-<br/>
-
-<img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ventosilenzioso&theme=shades-of-grey"/>
-
-</div>
-
----
-
-## 🏆 GitHub Trophy
-
-<div align="center">
-
-<img width="95%" src="https://github-profile-trophy.vercel.app/?username=ventosilenzioso&theme=darkhub&no-frame=true&no-bg=true&margin-w=15"/>
+<!-- Top languages -->
+<img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ventosilenzioso&layout=compact&theme=dark&hide_border=true"/>
 
 </div>
