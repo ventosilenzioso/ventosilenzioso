@@ -10,7 +10,7 @@
 ## 🧑‍💻 About Me
 
 - 🎓 **14 y/o Student**  
-- 🌟 **Ambitious & Dream-Oriented** — aspiring to become a **Software Engineer**  
+- 🌟 **Ambitious & Dream-Oriented** — aspiring to become a **Backend Developer**  
 - 💻 **Currently learning low-level programming** including **Golang, C, C++**, exploring **system design concepts**, and improving **problem-solving skills**  
 
 ---
